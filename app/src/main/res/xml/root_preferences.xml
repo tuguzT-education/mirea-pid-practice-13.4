@@ -1,0 +1,19 @@
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="example_switch"
+        android:summary="Turn this option on or off"
+        android:title="Settings option" />
+
+    <ListPreference
+        android:dependency="example_switch"
+        android:entries="@array/entries"
+        android:entryValues="@array/entry_values"
+        android:key="list"
+        android:title="Color list"
+        app:useSimpleSummaryProvider="true" />
+
+</PreferenceScreen>
